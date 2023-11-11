@@ -1,0 +1,22 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.headerConatiner{
+    display: flex;
+    justify-content: space-between;
+    ju
+    padding: 2px;
+    background: red;
+}
+.logo{
+    justify-content: center;
+    align-items: center;
+    font-family: Broadway;
+    font-size: 26px;
+}
+.ul li{
+    display: inline;
+    justify-content: space-around;
+
+}
