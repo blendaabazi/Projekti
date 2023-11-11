@@ -3,20 +3,19 @@
     padding: 0%;
 }
 .headerConatiner{
-    display: flex;
-    justify-content: space-between;
-    ju
-    padding: 2px;
-    background: red;
+    padding: auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: rgb(196, 105, 105);
 }
 .logo{
-    justify-content: center;
-    align-items: center;
+    display:flex;
+    margin-left: 15px;
     font-family: Broadway;
     font-size: 26px;
 }
-.ul li{
-    display: inline;
-    justify-content: space-around;
-
+.headerConatiner li{
+    display: inline-flex;
+    margin-right: 15px;
 }
