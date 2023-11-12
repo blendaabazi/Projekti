@@ -5,7 +5,6 @@
 .headerConatiner{
     display: flex;
     justify-content: space-between;
-    ju
     padding: 2px;
     background: red;
 }
@@ -19,4 +18,39 @@
     display: inline;
     justify-content: space-around;
 
+}
+.footerStart{
+    display: flex;
+    justify-content: space-around;
+    margin-top:10px ;
+    
+}
+.footerContent{
+    background-color: grey;
+    padding: 0px 25px ;
+    margin: 1;
+}
+.links{
+    display: flex;
+    width: 40px;
+    padding-top:15px ;
+
+}
+.footerMain{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footerLeft{
+    width: 300px;
+}
+.footerCenter{
+    width:100px;
+}
+.footerRight{
+    width: 100px;
+}
+.footerEnd{
+    display: flex;
+    justify-content: end;
 }
