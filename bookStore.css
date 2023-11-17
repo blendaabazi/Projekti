@@ -5,66 +5,116 @@
 .headerConatiner{
     display: flex;
     justify-content: space-between;
-    padding: 2px;
+    padding: 5px;
     background:grey;
     align-items: center;
-    height: 90px;
+    height: 40px;
+    flex-wrap: wrap;
+    
 }
 .logo{
-    margin-left: 15px;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     font-family: Broadway;
     font-size: 26px;
+}
+@media screen and (max-width:600px){
+    .headerConatiner li a{
+        font-size: 10px;
+        font-weight: bold;
+    }
+    .logo{
+        text-align: start;
+        font-size: 15px;
+    }
+    .headerConatiner{
+        padding: 20px;
+    }
+    .headerConatiner li a{
+        padding: 5px 6px;
+    }
 }
 .headerConatiner li{
     display: inline;
     justify-content: space-around;
     padding-right: 15px;
+    
+}
+.headerConatiner li a{
+    text-decoration: none;
+    color: black;
+    border: 1px;
+    box-shadow: 0px 0px 3px;
+    padding: 10px 20px;
+}
+ul li a:hover{
+    background-color: aliceblue;
+    color: #000;
 }
 .bgPhoto{
     display: flex;
-    background-image: url(foto1.png);
-    height: 400px;
+    background-image: url(bgPhoto.png);
+    background-size: cover;
+    height: 500px;
+    background-repeat:repeat;
     justify-content: center;
     align-items: center;
+
+}
+.bgPhoto button{
+    width: 90px;
+    height: 40px;
+    margin-left: 20px;
+    box-shadow: 0px 0px 10px;
+}
+button a{
+    text-decoration: none;
+}
+button:hover{
+    border: 2px solid black;
+    box-shadow: 0px 0px 3px;
 }
 .footerStart{
     display: flex;
     justify-content: space-around;
-    margin-top:10px ;
+    padding-top: 40px;
     
 }
 .footerContent{
-    background-color: rgb(177, 171, 171);
+    background-color: rgb(170, 169, 169);
     padding: 0px 25px ;
-    margin: 1;
+    box-shadow: 0px 0px 10px;
 }
 .links{
     display: flex;
     width: 40px;
     padding-top:15px ;
-
+}
+.links a{
+    padding-left: 10px;
 }
 .photos{
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap:wrap;
-    margin-top: 50px;
-    margin-bottom: 100px;
     background-color: rgb(170, 169, 169);
-    
+    padding-bottom: 50px;
     
 }
 .photos img{
-    width: 300px;
+    width: 200px;
     margin-inline: 10px;
     margin-top: 70px;
+    margin-left: 38px;
+    margin-right: 20px;
 }
 .rubrika h2,p{
     margin-top: 5px;
-    margin-bottom: 1px;    
+    margin-bottom: 1px;  
+    margin-left: 38px;
+    margin-right: 20px;  
 }
 
 .footerMain{
