@@ -1,0 +1,134 @@
+
+*{
+    font-family: 'poppins';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .6s;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    background: url("bgPhoto.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.box{
+    height: 500px;
+    width: 400px;
+    background-color:rgba(255,255,255,0.1) ;
+    border: 1px solid #fff;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+}
+.detais{
+    height:100% ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap:20px;
+    padding: 4%;
+}
+.loginbox{
+    padding: 4%;
+}
+.box-wraper{
+    position: relative;
+    height: 50px;
+    width:100% ;
+    margin-top: 8px;
+}
+input{
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    padding: 0 8px;
+    border-radius: 5px;
+}
+input::placeholder{
+    transition: .6s;
+}
+.box-wraper:hover input::placeholder{
+    position: absolute;
+    top: -12px;
+    opacity: 0;
+}
+label{
+    position: absolute;
+    top: -20px;
+    left: 0;
+    color: black;
+    opacity: 0;
+}
+.box-wraper:hover label{
+    top: -25px;
+    opacity: 1;
+}
+button{
+    height:50px ;
+    width: 100%;
+    border: none;
+    background-color:rgb(57, 57, 134) ;
+    color:black;
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    border-radius: 8px;
+}
+h2{
+    color:black;
+    font-size: 2.7rem;
+}
+p{
+    font-weight: 500;
+}
+p, p a{
+    color:black;
+    letter-spacing: 0.12;
+}
+p a{
+    color: rgb(57,57,134);
+    font-weight: 800;
+    text-decoration: none;
+    margin-left: 8px;
+
+}
+.dtsignin{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12% 15%;
+}
+.dtsignup{
+    position: absolute;
+    top: 0;
+    right: -100%;
+    padding: 12% 15%;
+}
+.callreg{
+    right: 100%;
+}
+.setreg{
+    right:0 ;
+}
+@media (max-width:500px) {
+    .box{
+        width: 330px;
+    }
+    .dtsignin{
+        padding: 16% 8%;
+    }
+    .dtsignup{
+        padding: 18% 10%;
+    }
+}

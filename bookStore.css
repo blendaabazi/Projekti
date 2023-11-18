@@ -26,6 +26,13 @@
         font-size: 10px;
         font-weight: bold;
     }
+@media screen and (max-width:547px){
+    .footerContent{
+        width: 100px;
+        
+    }
+    
+}
     .logo{
         text-align: start;
         font-size: 15px;
