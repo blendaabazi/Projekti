@@ -3,9 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login/Register</title>
+    <link rel="stylesheet" href="LoginForm.css">
 </head>
 <body>
-    <p>Hello World</p>
+    <div class="container">
+        <div class="box loginbox">
+            <div class="detais dtsignin">
+                <h2>Login</h2>
+                <div class="box-wraper">
+                    <input type="text" placeholder="Username">
+                    <label for="">Username</label>
+                </div>
+                <div class="box-wraper">
+                    <input type="password" placeholder="Password">
+                    <label for="">Password</label>
+                </div>
+                <button id="btnlgn">Login</button>
+                <p>Don't have account?<a href="#" id="link_rg" >Register</a></p>
+            </div>
+       
+        <div class="singupbox" >
+            <div class="detais dtsignup">
+                <h2>Register</h2>
+                <div class="box-wraper">
+                    <input type="text" placeholder="Username">
+                    <label for="">Username</label>
+                </div>
+                <div class="box-wraper">
+                    <input type="password" placeholder="Password">
+                    <label for="">Password</label>
+                </div>
+                <div class="box-wraper">
+                    <input type="email" placeholder="Email">
+                    <label for="">Email</label>
+                </div>
+
+                <button id="btnrg">Register</button>
+                <p>Already have account?<a href="#" id="link_lg">Login</a></p>
+            </div>
+        </div>
+    </div>
 </body>
+ <script>
+    let detlg = document.querySelector(".dtsignin");
+    let detrg = document.querySelector(".dtsignup");
+
+    let linkrg = document.querySelector("#link_rg");
+    let linklg = document.querySelector("#link_lg");
+
+    function callsign(){
+        detlg.classList.toggle("callreg");
+        detrg.classList.toggle("setreg");
+    }
+
+    linkrg.addEventListener("click",callsign);
+    linklg.addEventListener("click",callsign);
+</script> 
 </html>
