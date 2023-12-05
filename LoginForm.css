@@ -19,7 +19,7 @@
     gap: 20px;
 }
 .box{
-    height: 500px;
+    height: 530px;
     width: 400px;
     background-color:rgba(255,255,255,0.1) ;
     border: 1px solid #fff;
@@ -58,21 +58,13 @@ input{
 input::placeholder{
     transition: .6s;
 }
-.box-wraper:hover input::placeholder{
-    position: absolute;
-    top: -12px;
-    opacity: 0;
-}
+
 label{
     position: absolute;
     top: -20px;
     left: 0;
     color: black;
     opacity: 0;
-}
-.box-wraper:hover label{
-    top: -25px;
-    opacity: 1;
 }
 button{
     height:50px ;

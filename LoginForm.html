@@ -29,19 +29,27 @@
             <div class="detais dtsignup">
                 <h2>Register</h2>
                 <div class="box-wraper">
-                    <input type="text" placeholder="Username">
+                    <input type="text" placeholder="Name" id="name">
+                    <label for="">Name</label>
+                    <div class="error-message" id="nameError"></div>
+                </div>
+                <div class="box-wraper">
+                    <input type="text" placeholder="Username" id="uname">
                     <label for="">Username</label>
+                    <div class="error-message" id="uError"></div>
                 </div>
                 <div class="box-wraper">
-                    <input type="password" placeholder="Password">
-                    <label for="">Password</label>
-                </div>
-                <div class="box-wraper">
-                    <input type="email" placeholder="Email">
+                    <input type="email" placeholder="Email" id="email">
                     <label for="">Email</label>
+                    <div class="error-message" id="emailError"></div>
                 </div>
-
-                <button id="btnrg">Register</button>
+                <div class="box-wraper">
+                    <input type="password" placeholder="Password" id="pass">
+                    <label for="">Password</label>
+                    <div class="error-message" id="passError"></div>
+                </div>
+    
+                <button id="btnrg" onclick="func2()">Register</button>
                 <p>Already have account?<a href="#" id="link_lg">Login</a></p>
             </div>
         </div>
@@ -64,6 +72,8 @@
 
     let usernameRegex = /[A-Za-z0-9.-_]{8,15}$/;
     let passwordRegex = /^[A-Z]+[a-z.-_]+[0-9]{3}$/;
+    let nameRedex=/^[A-Z][a-z]{2,10}$/;
+    let emailRedex =/[a-z0-9.-_]+@+[a-z]+\.+[a-z]{2,4}$/;
 
     function func1(){
 
@@ -86,8 +96,42 @@
 
       alert('Success!');
     }
-    
 
+    function func2(){
+        let nameInput = document.getElementById('name');
+        let nameError = document.getElementById('nameError');
 
+        let usernameInput = document.getElementById('uname');
+        let usernameError = document.getElementById('uError');
+
+        let emailInput = document.getElementById('email');
+        let emailError = document.getElementById('emailError');
+
+        let passwordInput = document.getElementById('pass');
+        let passwordError = document.getElementById('passError');
+
+        nameError.innerText = '';
+        usernameError.innerText = '';
+        emailError.innerText = '';
+        passwordError.innerText = '';
+
+        if(nameRedex.test(nameInput.value) === false){
+        nameError.innerText = 'Invalid input';
+        return;
+        }
+        if(usernameRegex.test(usernameInput.value) === false){
+        usernameError.innerText = 'Invalid input';
+        return;
+        }
+        if(emailRedex.test(emailInput.value) === false){
+        emailError.innerText = 'Invalid input';
+        return;
+        }
+        if(passwordRegex.test(passwordInput.value) === false){
+        passwordError.innerText = 'Invalid input';
+        return;
+        }
+     alert('Success!');
+}
 </script> 
 </html>
