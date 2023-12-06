@@ -102,6 +102,7 @@
     background-size: cover;
     height: 600px;
     background-repeat:no-repeat;
+    /* background-color: #21437a; */
     justify-content: center;
     align-items: center;
 }
@@ -111,6 +112,13 @@
     margin-left: 20px;
     box-shadow: 0px 0px 10px;
 }
+#slider-button,button{
+    padding: 15px;
+    text-align: center;
+    background-color: transparent;
+    font-weight: bold;
+}
+
 .headerConatiner li{
     display: inline;
     /* justify-content: space-evenly; */
@@ -134,23 +142,23 @@ ul li a:hover{
     padding: 70px 0px 0px 70px;
     font-size: 50px;
     width: auto;
-    font-family: Magneto;
     color: black;
+    text-align: center;
 }
 .bgPhoto{
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 150px;
-
+    
 }
 .bgPhoto button{
     width: 150px;
     height: 50px;
-    margin-left: 30px;
     box-shadow: 0px 0px 10px;
     background-color:transparent;
     align-items: center;
+    margin-bottom: 80px;
 }
 button a{
     text-decoration: none;
@@ -169,7 +177,7 @@ button:hover{
     
 }
 .footerContent{
-    background-color:#ccc6af ;
+    background-color:#b4d4d0 ;
     padding: 0px 25px ;
     box-shadow: 0px 0px 10px;
 }
@@ -188,7 +196,7 @@ button:hover{
     align-items: center;
     flex-wrap:wrap;
     /*background-color: rgb(170, 169, 169);*/
-    background-color:#e0dac3;
+    background-color:#b4d4d0;
     /* background-color:#c1cfe6; */
     padding-bottom: 90px;
     padding-top: 60px;

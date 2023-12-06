@@ -29,7 +29,7 @@
             <div class="detais dtsignup">
                 <h2>Register</h2>
                 <div class="box-wraper">
-                    <input type="text" placeholder="Name" id="name">
+                    <input type="text" placeholder="Name Surname" id="name">
                     <label for="">Name</label>
                     <div class="error-message" id="nameError"></div>
                 </div>
@@ -72,8 +72,8 @@
 
     let usernameRegex = /[A-Za-z0-9.-_]{8,15}$/;
     let passwordRegex = /^[A-Z]+[a-z.-_]+[0-9]{3}$/;
-    let nameRedex=/^[A-Z][a-z]{2,10}$/;
-    let emailRedex =/[a-z0-9.-_]+@+[a-z]+\.+[a-z]{2,4}$/;
+    let nameRegex=/^[A-Z][a-z]{2,20}/;
+    let emailRegex =/[a-z0-9.-_]+@+[\sa-z]+\.+[\sa-z]{2,4}$/;
 
     function func1(){
 
@@ -115,20 +115,20 @@
         emailError.innerText = '';
         passwordError.innerText = '';
 
-        if(nameRedex.test(nameInput.value) === false){
-        nameError.innerText = 'Invalid input';
+        if(nameRegex.test(nameInput.value) === false){
+        nameError.innerText = 'Emri juaj duhet te filloj me shkronje te madhe!';
         return;
         }
         if(usernameRegex.test(usernameInput.value) === false){
-        usernameError.innerText = 'Invalid input';
+        usernameError.innerText = 'Username duhet te perfshije 8-15 karaktere!';
         return;
         }
-        if(emailRedex.test(emailInput.value) === false){
-        emailError.innerText = 'Invalid input';
+        if(emailRegex.test(emailInput.value) === false){
+        emailError.innerText = 'Invalid email input';
         return;
         }
         if(passwordRegex.test(passwordInput.value) === false){
-        passwordError.innerText = 'Invalid input';
+        passwordError.innerText = 'Password duhet te filloj me shkronje te madhe me 3 numra';
         return;
         }
      alert('Success!');
