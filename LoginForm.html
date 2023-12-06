@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -70,11 +70,15 @@
     linkrg.addEventListener("click",callsign);
     linklg.addEventListener("click",callsign);
 
-    let usernameRegex = /[A-Za-z0-9.-_]{8,15}$/;
-    let passwordRegex = /^[A-Z]+[a-z.-_]+[0-9]{3}$/;
-    let nameRedex=/^[A-Z][a-z]{2,10}$/;
-    let emailRedex =/[a-z0-9.-_]+@+[a-z]+\.+[a-z]{2,4}$/;
 
+
+
+
+
+
+    let usernameRegex = /[A-Za-z0-9.-_]{8,15}$/;
+    let passwordRegex = /^[A-Z]+[a-z.-_\s]+[0-9]{3,}$/;
+   
     function func1(){
 
         let usernameInput = document.getElementById('username');
@@ -86,52 +90,20 @@
         passwordError.innerText = '';
 
         if(usernameRegex.test(usernameInput.value) === false){
-        usernameError.innerText = 'Invalid input';
+        usernameError.innerText = 'Invalid input!';
         return;
        }
        if(passwordRegex.test(passwordInput.value) === false){
-        passwordError.innerText = 'Invalid input';
+        passwordError.innerText = 'Invalid input!';
         return;
        }
 
       alert('Success!');
     }
 
-    function func2(){
-        let nameInput = document.getElementById('name');
-        let nameError = document.getElementById('nameError');
 
-        let usernameInput = document.getElementById('uname');
-        let usernameError = document.getElementById('uError');
 
-        let emailInput = document.getElementById('email');
-        let emailError = document.getElementById('emailError');
-
-        let passwordInput = document.getElementById('pass');
-        let passwordError = document.getElementById('passError');
-
-        nameError.innerText = '';
-        usernameError.innerText = '';
-        emailError.innerText = '';
-        passwordError.innerText = '';
-
-        if(nameRedex.test(nameInput.value) === false){
-        nameError.innerText = 'Invalid input';
-        return;
-        }
-        if(usernameRegex.test(usernameInput.value) === false){
-        usernameError.innerText = 'Invalid input';
-        return;
-        }
-        if(emailRedex.test(emailInput.value) === false){
-        emailError.innerText = 'Invalid input';
-        return;
-        }
-        if(passwordRegex.test(passwordInput.value) === false){
-        passwordError.innerText = 'Invalid input';
-        return;
-        }
-     alert('Success!');
-}
+    
+    
 </script> 
 </html>
