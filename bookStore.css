@@ -58,12 +58,44 @@
     z-index: 2;
 }
 }
-@media screen and (max-width:547px){
+/* @media screen and (max-width:547px){
     .footerContent{
         width: 362px;
         height: 200px;
         
-    }
+    } */
+    @media screen and (max-width: 700px) {
+        .footerContent {
+          /* Stili për footer-in për madhësi të vogla ekrani */
+          padding: 70px;
+        }
+        .footerStart{
+          /* Stili për përmbajtjen në footer për madhësi të vogla ekrani */
+          flex-direction:row;
+          align-items: center;
+          justify-content: space-around;
+        }
+       
+        footerRight {
+            justify-content: center; 
+            margin-top: 10px;
+          }
+          
+          .links {
+            width: auto;
+            flex-wrap: wrap; 
+          }
+          
+          .links a {
+            margin: 5px; 
+          }
+          .footerLeft {
+           text-align: center; 
+           
+          }
+        
+        }
+      
     .footerStart{
         display: flex;
         justify-content: space-around;
@@ -249,7 +281,9 @@ button:hover{
     align-items: center;
 }
 .footerLeft{
-    width: 300px;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
     
 }
 .footerCenter{
