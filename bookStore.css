@@ -25,7 +25,7 @@
     font-size: 26px;
     color: black;
 }
-@media screen and (max-width:700px){
+@media screen and (max-width:780px){
     body{
         margin: 0;
         padding: 0;
@@ -38,10 +38,11 @@
         width: 100px;
         text-align: center;
     }
-    .slogan{
-        font-size: 15px;
+    .slogan h2{
+        text-align: left;
+        padding-right: 180px;
+        font-size: 50px;
     }
-
 .headerConatiner{
     display: flex;
     justify-content: space-between;
@@ -72,12 +73,12 @@
         
     }
     .slogan h2{
-        padding-right: 10px;
+        text-align: left;
+        padding-right: 180px;
         font-size: 40px;
     }
     .logo{
-        text-align: start;
-        font-size: 15px;
+        font-size: 22px;
     }
     .headerConatiner{
         padding: 20px;
@@ -85,16 +86,7 @@
     .headerConatiner li a{
         padding: 5px 6px;
     }
-    /* .div-links{
-        position: absolute;
-        height: 80px;
-        width: 100px;
-        background: #544e38;
-        top: 0;
-        right: 0;
-        text-align: left;
-        z-index: 2;
-    } */
+    
 }
 .b{
     background-image: url(bgPhoto.png);
@@ -122,16 +114,17 @@
 .headerConatiner li{
     display: inline;
     /* justify-content: space-evenly; */
-    padding-right: 15px;
+    margin-right: 20px;
     
 }
 .headerConatiner li a{
     text-decoration: none;
     color: black;
     border: 1px;
-    box-shadow: 0px 0px 3px;
+    box-shadow: 0px 0px 5px;
     padding: 10px 20px;
     font-size: 17px;
+    width: 140px;
    
 }
 ul li a:hover{
@@ -148,7 +141,7 @@ ul li a:hover{
 .bgPhoto{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     padding-top: 150px;
     
 }
