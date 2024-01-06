@@ -12,11 +12,6 @@
     flex-wrap: wrap;
     
 }
-/* .div-links{
-    flex: 1;
-    text-align: right;
-} */
-
 .logo{
     display: flex;
     justify-content: space-between;
@@ -59,12 +54,6 @@
     z-index: 2;
 }
 }
-/* @media screen and (max-width:547px){
-    .footerContent{
-        width: 362px;
-        height: 200px;
-        
-    } */
     @media screen and (max-width: 700px) {
         .footerContent {
           /* Stili për footer-in për madhësi të vogla ekrani */
@@ -72,30 +61,31 @@
         }
         .footerStart{
           /* Stili për përmbajtjen në footer për madhësi të vogla ekrani */
-          flex-direction:row;
-          align-items: center;
-          justify-content: space-around;
+            margin-left: -20px;
         }
-       
-        footerRight {
+        
+        .footerRight {
             justify-content: center; 
             margin-top: 10px;
+            margin-left: -100px;
           }
           
           .links {
             width: auto;
             flex-wrap: wrap; 
-          }
-          
-          .links a {
             margin: 5px; 
           }
-          .footerLeft {
-           text-align: center; 
+        .footerCenter {
+            margin-left: -40px;
+        }
+          
+        .footerLeft {
+           margin-left: 70px;
            
           }
         
         }
+    @media screen and (max-width:547px){
       
     .footerStart{
         display: flex;
@@ -121,7 +111,7 @@
     
 }
 .b{
-    background-image: url(bgPhoto.png);
+    background-image: url(images/bgPhoto.png);
     background-position: center;
     background-size: cover;
     height: 600px;
@@ -268,13 +258,66 @@ button:hover{
     background-color: #4065a1;
     color: white;
 }
+
+#div_contact{
+    min-height: 500px;
+    background-color: var(--quinaryColor);
+    margin-top: 50px;
+  }
+.container{
+    width: 100%;
+    padding: 80px 0;
+}
+  
+.container h2{
+    margin-bottom: 28px;
+    font-size: 40px;
+    text-align: center;
+}
+.container p{
+    margin-top: 50px;
+}
+.contact_form{
+    max-width: 50%;
+    margin: 0 auto;
+}
+.form_group{
+    display: flex;
+    justify-content: space-between;
+}
+.contact_form input,
+.contact_form textarea{
+    width: 100%;
+    background-color: transparent;
+    color: #000;
+    padding: 10px 20px;
+    margin-top: 40px;
+    border: none;
+    border: 1px solid #000;
+}
+.gender_options{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.select_box{
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
+    padding: 10px;
+}
+#submit:hover{
+    background-color: #19283f;
+    color: #fff;
+}
 .footerMain{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 .footerLeft{
-    width: 100%;
+    width: 250px;
     text-align: left;
     padding: 10px;
     
@@ -295,3 +338,6 @@ button:hover{
     padding: 25px 25px;
 
 }
+
+
+
