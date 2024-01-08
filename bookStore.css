@@ -214,10 +214,7 @@ button:hover{
     justify-content: space-around;
     align-items: center;
     flex-wrap:wrap;
-    /*background-color: rgb(170, 169, 169);*/
-    /* background-color:#b4d4d0; */
     background-color: #dcdde4;
-    /* background-color:#c1cfe6; */
     padding-bottom: 90px;
     padding-top: 60px;
 }
@@ -230,8 +227,6 @@ button:hover{
     box-shadow: 0 0 8px;
 }
 .rubrika{
-    
-    /* background-color: #ccced6; */
     background-color: white;
     margin: 15px 10px;
     padding: 2px 2px 2px 2px;
@@ -295,6 +290,8 @@ button:hover{
     border: none;
     border: 1px solid #000;
 }
+
+
 .gender_options{
     display: flex;
     justify-content: space-between;

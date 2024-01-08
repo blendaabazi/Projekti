@@ -147,43 +147,49 @@
             <button>Shto në shportë</button>
         </div>
     </div>
-    <div id="div_contact">
+
+  <!-- ContactUs -->
+    <section id="div_contact">
         <div class="container">
             <h2>Contact Us</h2>
             <form method="POST" name="contact_form" class="contact_form" id="form"  autocomplete="off">
               <div class="form_group">
                 <div class="form_control">
                   <input type="text" id="name" placeholder="Name"/>
-                  <div class="error-message" id="usernameError"></div>
+                  <span class="error" id="nameError"></span>
                 </div>
                 <div class="form_control">
                   <input type="text" id="email" placeholder="Email"/>
+                  <span class="error" id="emailError"></span>
                 </div>
                
             </div>
               <div class="form_group">
                 <div class="form_control">
                   <input type="password" id="password" placeholder="Password" />
+                  <span class="error" id="passwordError"></span>
                 </div>
                
                 <div class="form_control">
                     <input type="password" id="repeatPw" placeholder="Confirm Password" />
+                    <span class="error" id="repeatPwError"></span>
                 </div>
               </div>
 
               <div class="form_control">
                 <input type="tel" name="phone" id="phone" placeholder="Phone Number" />
+                <span class="error" id="phoneError"></span>
               </div>
 
               <div class="gender_options">
                 <label for="male" class="radio_label">Male
                   <input type="radio" name="gender" id="male" value="male" />
                 </label>
-
                 <label for="female" class="radio_label" >Female
                   <input type="radio" name="gender" id="female" value="female" />
                 </label>
               </div>
+              
 
               <div class="form_control">
                 <textarea name="message" id="message" cols="30" rows="10" placeholder="Message..."></textarea>
@@ -195,7 +201,7 @@
               </div>
             </form>
         </div>
-    <div>
+    <section>
     <footer class="footerContent">
         <div class="footerStart">
             <h2>Rreth nesh</h2>
@@ -223,8 +229,9 @@
     </footer>
 </div>
 <script>
+    //Slider
     let i=0;
-    var imgArray = ["img-02.png","img-01.png","img-03.png"];
+    var imgArray = ["images/img-02.png","images/img-01.png","images/img-03.png"];
     function changeImg(){
         document.getElementById('slideshow').src=imgArray[i];
         if(i<imgArray.length-1){
@@ -236,5 +243,57 @@
     }
     document.body.addEventListener('load',changeImg());
 </script>
+
+
+<script>
+    document.getElementById('form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      let nameInput = document.getElementById('name');
+      let emailInput = document.getElementById('email');
+      let passwordInput = document.getElementById('password');
+      let repeatPwInput = document.getElementById('repeatPw');
+      let phoneInput = document.getElementById('phone');
+
+      let nameError = document.getElementById('nameError');
+      let emailError = document.getElementById('emailError');
+      let passwordError = document.getElementById('passwordError');
+      let phoneError = document.getElementById('phoneError');
+      let repeatPwError = document.getElementById('repeatPwError');
+
+      nameError.innerText = '';
+      emailError.innerText = '';
+      passwordError.innerText = '';
+      phoneError.innerText = '';
+      repeatPwError.innerText = '';
+
+      let nameRegex=/^[A-Z][a-z]{2,20}/;
+      let emailRegex =/[a-z0-9.-_]+@+[\sa-z]+\.+[\sa-z]{2,4}$/;
+      let passwordRegex = /^[A-Z]+[a-z.-_]+[0-9]{3}$/;
+      let phoneRegex = /^\+[0-9]{12}$/;
+
+
+      if (!nameRegex.test(nameInput.value)) {
+        nameError.innerText = 'Invalid input.';
+      }
+
+      if (!emailRegex.test(emailInput.value)) {
+        emailError.innerText = 'Invalid email input.';
+      }
+
+      if (!passwordRegex.test(passwordInput.value)) {
+        passwordError.innerText = 'Invalid input.';
+      }
+      
+      if (!phoneRegex.test(phoneInput.value)) {
+        phoneError.innerText = 'Invalid input.';
+      }
+      if (password !== repeatPw) {
+        repeatPwError.innerText = 'Incorrect password.';
+        return;
+      }
+      
+    });
+  </script>
 </body>
 </html>

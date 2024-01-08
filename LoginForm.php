@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="LoginForm.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" style="background: url(images/bgPhoto.png);background-position: center;background-repeat: no-repeat; background-size: cover;">
         <div class="box loginbox">
             <div class="detais dtsignin">
                 <h2>Login</h2>

@@ -7,35 +7,72 @@
     <link rel="stylesheet" href="bookStore.css">
 </head>
 <body>
-    <div class="b" style="height: 400px;">
+    <div class="b">
     <header class="headerConatiner">
         <div class="logo">
             <p>BookStore</p>
         </div>
         <div class="div-links">
         <ul>
-            <li><a href="index.php">Home</a></li>
+            <li><a href="bookStore.html">Home</a></li>
             <li><a href="#">
-                <select onchange="location=this.value" style="background-color:transparent; border: none;">
-                <option  value="">Category</option>
-                <option  value="ChildrenBooks.php">Libra per femije</option>
-                <option  value="Roman.php">Romane</option>
-                <option  value="cookBooks.php">Libra Gatimi</option>
-                <option value="LibraShkencor.php">Libra Shkencor</option>
+                <select onchange="location=this.value"  style="background-color:transparent; border: none;">
+                <option  value="Category">Category</option>
+                <option value="ChildrenBooks.html">Libra per femije</option>
+                <option  value="Roman.html">Romane</option>
+                <option  value="cookBooks.html">Libra Gatimi</option>
+                <option  value="LibraShkencor.html">Libra Shkencor</option>
+
                 </select></a>
             </li>
             <li><a href="#">Shopping List</a></li>
-            <li><a href="LoginForm.php">Login</a></li>
+            <li><a href="LoginForm.html" style="background-color: rgb(0, 0, 0); color: white;">Login</a></li>
         </ul>
     </div>
     </header>
     <hr style="color: white;">
     <main class="slogan">
-        <h2>Romane</h2>
-        <p>Ketu mund te gjeni ...</p>
+        <h2>Open a book,<br> open your mind.</h2>
+        <div class="bgPhoto">
+            <button style="background-color: rgb(0, 0, 0); color: white;"><a href="#">Shop Now</a></button>
+        </div>
     </main> 
     </div>
+
+    <div  id="slider" style="background-color: #dcdde4;">
+             <!-- style="background-color: #b4d4d0; -->
+            <img style=" width: 100%; height: 600px;" id="slideshow" />
+            <button  onclick="changeImg()">Next</button>
+    
+    </div>
     <div class="photos">
+        <div class="rubrika">
+            <img src="images/foto2.png" alt="foto2" style="width: 198px; height:280px ;">
+            <h2>Libra per femije</h2>
+            <p>Cmimi - 3.50$</p>
+            <button>Shto në shportë</button>
+        </div>
+        <div class="rubrika">
+            <img src="images/foto6.png" alt="foto6" style="width: 198px;">
+            <h2>Libra per femije</h2>
+            <p>Cmimi - 2.50$</p>
+            <button>Shto në shportë</button>
+        </div>
+        <div class="rubrika">
+            <img src="images/foto7.png" alt="foto7" style="width: 198px; height:280px ;">
+            <h2>Libra per femije</h2>
+            <p>Cmimi - 3.00$</p>
+            <button>Shto në shportë</button>
+            
+        </div>
+        <div class="rubrika">
+            <img src="images/foto9.png" alt="foto9" style="width: 198px; height:280px">
+            <h2>Libra per femije</h2>
+            <p>Cmimi - 4.00$</p>
+            <button>Shto në shportë</button>
+
+        </div>
+        
         <div class="rubrika">
             <img src="images/foto38.png" alt="foto38">
             <h2>Romane</h2>
@@ -55,84 +92,57 @@
             <button>Shto në shportë</button>
         </div>
         <div class="rubrika">
-            <img src="images/foto37.png" alt="foto37" style="height:295px">
+            <img src="images/foto37.png" alt="foto37">
             <h2>Romane</h2>
             <p>Cmimi - 10.00$</p>
             <button>Shto në shportë</button>
         </div>
         <div class="rubrika">
-            <img src="images/foto31.png" alt="foto31" style="width: 198;">
-            <h2>Romane</h2>
-            <p>Cmimi - 12.50$</p>
-            <button>Shto në shportë</button>
-        </div>
-        <div class="rubrika">
-            <img src="images/foto32.png" alt="foto32" style="width: 198px;">
-            <h2>Romane</h2>
-            <p>Cmimi - 8.50$</p>
-            <button>Shto në shportë</button>
-        </div>
-        <div class="rubrika">
-            <img src="images/foto33.png" alt="foto33" style="width: 198px; height:280px ;">
-            <h2>Romane</h2>
-            <p>Cmimi - 9.00$</p>
-            <button>Shto në shportë</button>
-            
-        </div>
-        <div class="rubrika">
-            <img src="images/foto34.png" alt="foto34" style="width: 198px; height:280px">
-            <h2>Romane</h2>
-            <p>Cmimi - 12.00$</p>
-            <button>Shto në shportë</button>
-
-        </div>
-        
-        <div class="rubrika">
-            <img src="images/foto40.png" alt="foto40" style="width: 198;">
-            <h2>Romane</h2>
+            <img src="images/foto22.png" alt="foto22" >
+            <h2>Libra shkencor</h2>
             <p>Cmimi - 15.00$</p>
             <button>Shto në shportë</button>
         </div>
         <div class="rubrika">
-            <img src="images/foto41.png" alt="foto41">
-            <h2>Romane</h2>
+            <img src="images/foto23.png" alt="foto23">
+            <h2>Libra shkencor</h2>
             <p>Cmimi - 28.00$</p>
             <button>Shto në shportë</button>
         </div>
         <div class="rubrika">
-            <img src="images/foto42.png" alt="foto42" style="width: 200px; height: 290px;">
-            <h2>Romane</h2>
+            <img src="images/foto24.png" alt="foto24">
+            <h2>Libra shkencor</h2>
             <p>Cmimi - 33.00$</p>
             <button>Shto në shportë</button>
         </div>
         <div class="rubrika">
-            <img src="images/foto43.png" alt="foto43">
-            <h2>Romane</h2>
+            <img src="images/foto25.png" alt="foto25">
+            <h2>Libra shkencor</h2>
             <p>Cmimi - 40.00$</p>
             <button>Shto në shportë</button>
         </div>
         <div class="rubrika">
-            <img src="images/foto44.png" alt="foto44" style="width: 200px; height:290px">
-            <h2>Romane</h2>
-            <p>Cmimi - 6.90$</p>
+            <img src="images/foto17.png" alt="foto17" style="width: 198px; height:250px">
+            <h2>Libra gatimi</h2>
+            <p>Cmimi - 4.90$</p>
             <button>Shto në shportë</button>
         </div>
         <div class="rubrika">
-            <img src="images/foto45.png" alt="foto45" style="width: 200px; height:290px">
-            <h2>Romane</h2>
-            <p>Cmimi - 9.80$</p>
+            <img src="images/foto18.png" alt="foto18" style="width: 198px; height:250px">
+            <h2>Libra gatimi</h2>
+            <p>Cmimi - 6.80$</p>
             <button>Shto në shportë</button>
         </div>
         <div class="rubrika">
-            <img src="images/foto46.png" alt="foto46" style="width: 200px; height:290px">
-            <h2>Romane</h2>
+            <img src="images/foto19.png" alt="foto19" style="width: 198px; height:250px">
+            <h2>Libra gatimi</h2>
             <p>Cmimi - 5.00$</p>
             <button>Shto në shportë</button>
         </div>
         
         <div class="rubrika">
-            <img src="images/foto47.png" alt="foto47" style="width: 200px; height:290px">
-            <h2>Romane</h2>
+            <img src="images/foto60.png" alt="foto60" style="width: 198px; height:250px">
+            <h2>Libra gatimi</h2>
             <p>Cmimi - 10.00$</p>
             <button>Shto në shportë</button>
         </div>
@@ -164,7 +174,18 @@
     </footer>
 </div>
 <script>
-   
+    let i=0;
+    var imgArray = ["images/img-02.png","images/img-01.png","images/img-03.png"];
+    function changeImg(){
+        document.getElementById('slideshow').src=imgArray[i];
+        if(i<imgArray.length-1){
+            i++;
+        }
+        else{
+            i=0;
+        }
+    }
+    document.body.addEventListener('load',changeImg());
 </script>
 </body>
 </html>

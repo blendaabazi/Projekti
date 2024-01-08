@@ -43,44 +43,44 @@
             <button>Shto në shportë</button>
         </div>
         <div class="rubrika">
-            <img src="foto23.png" alt="foto23">
+            <img src="images/foto23.png" alt="foto23">
             <h2>Libra shkencor</h2>
             <p>Cmimi - 28.00$</p>
             <button>Shto në shportë</button>
         </div>
         <div class="rubrika">
-            <img src="foto24.png" alt="foto24">
+            <img src="images/foto24.png" alt="foto24">
             <h2>Libra shkencor</h2>
             <p>Cmimi - 33.00$</p>
             <button>Shto në shportë</button>
         </div>
         <div class="rubrika">
-            <img src="foto25.png" alt="foto25">
+            <img src="images/foto25.png" alt="foto25">
             <h2>Libra shkencor</h2>
             <p>Cmimi - 40.00$</p>
             <button>Shto në shportë</button>
         </div>
         <div class="rubrika">
-            <img src="foto26.png" alt="foto26">
+            <img src="images/foto26.png" alt="foto26">
             <h2>Libra Shkencor</h2>
             <p>Cmimi - 3.50$</p>
             <button>Shto në shportë</button>
         </div>
         <div class="rubrika">
-            <img src="foto27.png" alt="foto28" style="width: 200px;">
+            <img src="images/foto27.png" alt="foto28" style="width: 200px;">
             <h2>Libra Shkencor</h2>
             <p>Cmimi - 54.50$</p>
             <button>Shto në shportë</button>
         </div>
         <div class="rubrika">
-            <img src="foto28.png" alt="foto28" style="width: 190px; height:260px ;">
+            <img src="images/foto28.png" alt="foto28" style="width: 190px; height:260px ;">
             <h2>Libra Shkencor</h2>
             <p>Cmimi - 33.00$</p>
             <button>Shto në shportë</button>
             
         </div>
         <div class="rubrika">
-            <img src="foto29.png" alt="foto29" style="width: 190px; height:260px">
+            <img src="images/foto29.png" alt="foto29" style="width: 190px; height:260px">
             <h2>Libra Shkencor</h2>
             <p>Cmimi - 18.00$</p>
             <button>Shto në shportë</button>
@@ -88,50 +88,50 @@
         </div>
         
         <div class="rubrika">
-            <img src="foto30.png" alt="foto30" style="width: 190px; height: 260px;">
+            <img src="images/foto30.png" alt="foto30" style="width: 190px; height: 260px;">
             <h2>Libra Shkencor</h2>
             <p>Cmimi - 15.00$</p>
             <button>Shto në shportë</button>
         </div>
         <div class="rubrika">
-            <img src="foto48.png" alt="foto48" style="width: 190px;height: 260px;">
+            <img src="images/foto48.png" alt="foto48" style="width: 190px;height: 260px;">
             <h2>Libra Shkencor</h2>
             <p>Cmimi - 28.00$</p>
             <button>Shto në shportë</button>
         </div>
         <div class="rubrika">
-            <img src="foto49.png" alt="foto49" style="width: 200px; height: 260px;">
+            <img src="images/foto49.png" alt="foto49" style="width: 200px; height: 260px;">
             <h2>Libra Shkencor</h2>
             <p>Cmimi - 33.00$</p>
             <button>Shto në shportë</button>
         </div>
         <div class="rubrika">
-            <img src="foto50.png" alt="foto50" style="width: 190px;height: 260px;">
+            <img src="images/foto50.png" alt="foto50" style="width: 190px;height: 260px;">
             <h2>Libra Shkencor</h2>
             <p>Cmimi - 40.00$</p>
             <button>Shto në shportë</button>
         </div>
         <div class="rubrika">
-            <img src="foto51.png" alt="foto51" style="width: 200px; height:260px">
+            <img src="images/foto51.png" alt="foto51" style="width: 200px; height:260px">
             <h2>Libra Shkencor</h2>
             <p>Cmimi - 92.90$</p>
             <button>Shto në shportë</button>
         </div>
         <div class="rubrika">
-            <img src="foto52.png" alt="foto52" style="width: 200px; height:260px">
+            <img src="images/foto52.png" alt="foto52" style="width: 200px; height:260px">
             <h2>Libra Shkencor</h2>
             <p>Cmimi - 26.80$</p>
             <button>Shto në shportë</button>
         </div>
         <div class="rubrika">
-            <img src="foto53.png" alt="foto53" style="width: 200px; height:260px">
+            <img src="images/foto53.png" alt="foto53" style="width: 200px; height:260px">
             <h2>Libra Shkencor</h2>
             <p>Cmimi - 25.00$</p>
             <button>Shto në shportë</button>
         </div>
         
         <div class="rubrika">
-            <img src="foto54.png" alt="foto54" style="width: 200px; height:260px">
+            <img src="images/foto54.png" alt="foto54" style="width: 200px; height:260px">
             <h2>Libra Shkencor</h2>
             <p>Cmimi - 10.00$</p>
             <button>Shto në shportë</button>
@@ -152,9 +152,9 @@
         </div>
         <div class="footerRight">
             <div class="links">
-                <a href=""><img src="facebook.png" alt="facebook"  width="32px" height="32px"></a>
-                <a href=""><img src="instagram.png" alt="instagram"  width="32px" height="32px"></a>
-                <a href=""><img src="twitter.png" alt="twitter"  width="32px" height="32px"></a>
+                <a href=""><img src="images/facebook.png" alt="facebook"  width="32px" height="32px"></a>
+                <a href=""><img src="images/instagram.png" alt="instagram"  width="32px" height="32px"></a>
+                <a href=""><img src="images/twitter.png" alt="twitter"  width="32px" height="32px"></a>
             </div>
         </div>
         </div>
