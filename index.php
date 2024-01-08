@@ -288,7 +288,7 @@
       if (!phoneRegex.test(phoneInput.value)) {
         phoneError.innerText = 'Invalid input.';
       }
-      if (password !== repeatPw) {
+      if ((password.value)!==(repeatPw.value) ) {
         repeatPwError.innerText = 'Incorrect password.';
         return;
       }

@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['username'])){
+        header("location:index.php");
+    }
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,19 +16,21 @@
 <body>
     <div class="container" style="background: url(images/bgPhoto.png);background-position: center;background-repeat: no-repeat; background-size: cover;">
         <div class="box loginbox">
+        <form action="LoginForm.php" method="post">
             <div class="detais dtsignin">
                 <h2>Login</h2>
                 <div class="box-wraper">
-                    <input type="text" placeholder="Username" id="username">
+                    <input type="text" placeholder="Username" id="username" name="username">
                     <label for="">Username</label>
                     <div class="error-message" id="usernameError"></div>
                 </div>
                 <div class="box-wraper">
-                    <input type="password" placeholder="Password" id="password">
+                    <input type="password" placeholder="Password" id="password" name="password">
                     <label for="">Password</label>
                     <div class="error-message" id="passwordError"></div>
                 </div>
-                <button id="btnlgn" onclick="func1()">Login</button>
+                <!-- <input type="submit" name="loginBtn" value="Login"> -->
+                <button id="btnlgn" name="loginBtn" onclick="func1()">Login</button>
                 <p>Don't have account?<a href="#" id="link_rg" >Register</a></p>
             </div>
        
@@ -29,7 +38,7 @@
             <div class="detais dtsignup">
                 <h2>Register</h2>
                 <div class="box-wraper">
-                    <input type="text" placeholder="Name Surname" id="name">
+                    <input type="text" placeholder="Name" id="name">
                     <label for="">Name</label>
                     <div class="error-message" id="nameError"></div>
                 </div>
@@ -49,11 +58,17 @@
                     <div class="error-message" id="passError"></div>
                 </div>
     
-                <button id="btnrg" onclick="func2()">Register</button>
+                <button id="btnrg" name="loginBtn" onclick="func2()">Register</button>
                 <p>Already have account?<a href="#" id="link_lg">Login</a></p>
+
+            
             </div>
+            </form>
         </div>
     </div>
+    <?php
+        require_once 'LoginValidate.php';
+    ?>
 </body>
  <script>
     let detlg = document.querySelector(".dtsignin");
@@ -94,7 +109,7 @@
         return;
        }
 
-      alert('Success!');
+     
     }
 
     function func2(){
