@@ -1,3 +1,16 @@
+<?php
+
+  session_start();
+  $hide="";
+  if(!isset($_SESSION['username']))
+    header("location:LoginForm.php");
+  else{
+    if($_SESSION['role'] == "admin")
+      $hide = "";
+    else
+      $hide = "hide";
+?>
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -6,6 +19,11 @@
     <title>BookStore</title>
     <link rel="stylesheet" href="bookStore.css">
 </head>
+<style>
+ .hide{
+    display:none; 
+   }
+</style>
 <body>
     <div class="b">
     <header class="headerConatiner">
@@ -15,6 +33,7 @@
         <div class="div-links">
         <ul>
             <li><a href="index.php">Home</a></li>
+            <li><a href="dashboard.php" class="<?php echo $hide?>">Dashboard</a></li>
             <li><a href="#">
                 <select onchange="location=this.value"  style="background-color:transparent; border: none;">
                 <option  value="Category">Category</option>
@@ -26,7 +45,7 @@
                 </select></a>
             </li>
             <li><a href="#">Shopping List</a></li>
-            <li><a href="LoginForm.php" style="background-color: rgb(0, 0, 0); color: white;">Login</a></li>
+            <li><a href="LogOut.php" style="background-color: rgb(0, 0, 0); color: white;">LogOut</a></li>
         </ul>
     </div>
     </header>
@@ -297,3 +316,6 @@
   </script>
 </body>
 </html>
+<?php
+  }
+?>

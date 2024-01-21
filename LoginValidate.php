@@ -1,32 +1,28 @@
 <?php
+
    if(isset($_POST['loginBtn'])){
        if(empty($_POST['username']) || empty($_POST['password'])){
            echo "Fill all fields!";
        }else{
            $username = $_POST['username'];
            $password = $_POST['password'];
-
-           include_once 'users.php';
-
+           include_once 'userRepository.php';
+           include_once 'databaseConnection.php';
+           $userRepository = new UserRepository();
+           $users = $userRepository->getAllUsers();
            $i=0;
            foreach($users as $user){
-               $i++;
+             
                if($username == $user['username'] && $password == $user['password']){
-                   echo $username;
-                   echo $password;
-
                    session_start();
                    $_SESSION['username'] = $username;
                    $_SESSION['password'] = $password;
-                   $_SESSION['role'] = $user['role'];
-                    setcookie("username",$username,time()+3600);
-                    setcookie("username",$username,time()-3600);
-                   header("location:dashboard.php");
+                   header("location:index.php");
                    exit();
 
                }else{
-                   
-                   if($i == sizeof($users)){
+                   $i++; 
+                   if($i == sizeof($user)){
                     echo "Incorrect Username or Password!";
                     exit();
                    }

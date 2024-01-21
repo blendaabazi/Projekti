@@ -25,7 +25,7 @@
                 </select></a>
             </li>
             <li><a href="#">Shopping List</a></li>
-            <li><a href="LoginForm.php">Login</a></li>
+            
         </ul>
     </div>
     </header>

@@ -83,10 +83,15 @@
            margin-left: 70px;
            
           }
-        
+          .hide{
+            display:none; 
+           }
         }
     @media screen and (max-width:547px){
       
+        .hide{
+            display:none; 
+           }
     .footerStart{
         display: flex;
         justify-content: space-around;
@@ -336,5 +341,8 @@ button:hover{
 
 }
 
-
+/* Dashboard-Admin */
+/* .hide{
+    display:none;
+} */
 

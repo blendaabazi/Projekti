@@ -1,6 +1,7 @@
 <?php
     session_start();
-    if(!isset($_SESSION['username'])){
+    include_once 'databaseConnection.php';
+    if($_SESSION){
         header("location:index.php");
     }
     
@@ -16,7 +17,8 @@
 <body>
     <div class="container" style="background: url(images/bgPhoto.png);background-position: center;background-repeat: no-repeat; background-size: cover;">
         <div class="box loginbox">
-        <form action="LoginForm.php" method="post">
+        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+        <!-- <form action="LoginForm.php" method="post"> -->
             <div class="detais dtsignin">
                 <h2>Login</h2>
                 <div class="box-wraper">
@@ -38,22 +40,22 @@
             <div class="detais dtsignup">
                 <h2>Register</h2>
                 <div class="box-wraper">
-                    <input type="text" placeholder="Name" id="name">
+                    <input type="text" placeholder="Name" id="name" name="name">
                     <label for="">Name</label>
                     <div class="error-message" id="nameError"></div>
                 </div>
                 <div class="box-wraper">
-                    <input type="text" placeholder="Username" id="uname">
+                    <input type="text" placeholder="Username" id="uname" name="username"> 
                     <label for="">Username</label>
                     <div class="error-message" id="uError"></div>
                 </div>
                 <div class="box-wraper">
-                    <input type="email" placeholder="Email" id="email">
+                    <input type="email" placeholder="Email" id="email" name="email">
                     <label for="">Email</label>
                     <div class="error-message" id="emailError"></div>
                 </div>
                 <div class="box-wraper">
-                    <input type="password" placeholder="Password" id="pass">
+                    <input type="password" placeholder="Password" id="pass" name="password">
                     <label for="">Password</label>
                     <div class="error-message" id="passError"></div>
                 </div>
@@ -67,7 +69,9 @@
         </div>
     </div>
     <?php
+        include_once 'registerController.php';
         require_once 'LoginValidate.php';
+       
     ?>
 </body>
  <script>
