@@ -17,8 +17,8 @@
 <body>
     <div class="container" style="background: url(images/bgPhoto.png);background-position: center;background-repeat: no-repeat; background-size: cover;">
         <div class="box loginbox">
-        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-        <!-- <form action="LoginForm.php" method="post"> -->
+            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+            <!-- <form action="LoginForm.php" method="post"> -->
             <div class="detais dtsignin">
                 <h2>Login</h2>
                 <div class="box-wraper">
@@ -35,8 +35,11 @@
                 <button id="btnlgn" name="loginBtn" onclick="func1()">Login</button>
                 <p>Don't have account?<a href="#" id="link_rg" >Register</a></p>
             </div>
+            </form>
+        
        
         <div class="singupbox" >
+         <form action="LoginForm.php" method="post">
             <div class="detais dtsignup">
                 <h2>Register</h2>
                 <div class="box-wraper">
@@ -60,7 +63,7 @@
                     <div class="error-message" id="passError"></div>
                 </div>
     
-                <button id="btnrg" name="loginBtn" onclick="func2()">Register</button>
+                <button id="btnrg" name="registerBtn" onclick="func2()">Register</button>
                 <p>Already have account?<a href="#" id="link_lg">Login</a></p>
 
             

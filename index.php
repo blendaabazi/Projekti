@@ -1,6 +1,6 @@
 <?php
-
   session_start();
+  include_once 'userRepository.php';
   $hide="";
   if(!isset($_SESSION['username']))
     header("location:LoginForm.php");

@@ -3,7 +3,7 @@ include_once 'userRepository.php';
 include_once 'user.php';
 
 
-if(isset($_POST['loginBtn'])){
+if(isset($_POST['registerBtn'])){
     if(empty($_POST['name']) ||  empty($_POST['email']) ||
     empty($_POST['username']) || empty($_POST['password'])){
         echo "Fill all fields!";
