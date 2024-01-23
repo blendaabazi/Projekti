@@ -76,5 +76,18 @@ class UserRepository{
 
         echo "<script>alert('delete was successful'); </script>";
     }
+    public function isUsernameTaken($username) {
+        $conn = $this->connection;
+
+        $sql = "SELECT * FROM user WHERE username=?";
+        $statement = $conn->prepare($sql);
+
+        $statement->execute([$username]);
+        $user = $statement->fetch(PDO::FETCH_ASSOC);
+
+        return ($user !== false);
+    }
+
+    
 }
 ?>
