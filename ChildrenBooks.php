@@ -6,6 +6,30 @@
     <title>BookStore</title>
     <link rel="stylesheet" href="bookStore.css">
 </head>
+<style>
+      .slogan p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+    
+    
+}
+@media screen and (max-width:780px){
+   
+    .slogan p{
+        text-align: left;
+        padding-left: -80px;
+        font-size: 10px;
+        width:170px;
+    }
+    .slogan {
+        margin-top:30px;
+        padding:10px 0 10px 10px;
+    }
+    /* .slogan p (first:child){
+        margin-top:30px;
+    } */
+}
+</style>
 <body>
     <div class="b" style="height: 400px;">
     <header class="headerConatiner">
@@ -24,7 +48,7 @@
                 <option  value="LibraShkencor.php">Libra Shkencor</option>
                 </select></a>
             </li>
-            <li><a href="#">Shopping List</a></li>
+            <li><a href="ShoppingList.php">Shopping List</a></li>
             
         </ul>
     </div>
@@ -32,7 +56,8 @@
     <hr style="color: white;">
     <main class="slogan">
         <h2>Libra Per Femijë</h2>
-        <p>Ketu mund te gjeni ...</p>
+        <p>Librat e femijeve janë pasqyrimi i imagjinatës së pafund,</p> 
+            <p>hapësirë ku ëndrrat bëhen realitet.</p>
     </main> 
     </div>
     <div class="photos">

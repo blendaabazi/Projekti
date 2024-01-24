@@ -44,7 +44,7 @@
 
                 </select></a>
             </li>
-            <li><a href="#">Shopping List</a></li>
+            <li><a href="ShoppingList.php">Shopping List</a></li>
             <li><a href="LogOut.php" style="background-color: rgb(0, 0, 0); color: white;">LogOut</a></li>
         </ul>
     </div>
@@ -69,7 +69,7 @@
             <img src="images/foto2.png" alt="foto2" style="width: 198px; height:280px ;">
             <h2>Libra per femije</h2>
             <p>Cmimi - 3.50$</p>
-            <button>Shto në shportë</button>
+            <button onclick="addToShoppingList('Libri Per Femije 1', 3.50)">Shto në Shportë</button>
         </div>
         <div class="rubrika">
             <img src="images/foto6.png" alt="foto6" style="width: 198px;">
@@ -167,6 +167,7 @@
         </div>
     </div>
 
+  
   <!-- ContactUs -->
     <section id="div_contact">
         <div class="container">

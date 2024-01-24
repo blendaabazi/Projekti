@@ -60,7 +60,7 @@ class UserRepository{
 
          $statement = $conn->prepare($sql);
 
-         $statement->execute([$name,$username,$email,$password,$id,$role]);
+         $statement->execute([$name,$username,$email,$password,$role,$id]);
 
          echo "<script>alert('update was successful'); </script>";
     }
