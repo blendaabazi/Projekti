@@ -79,6 +79,7 @@
     
     <nav>
         <a href="index.php">Home</a>
+        <a href="#section__b">Contacts</a>
         <a href="#">Products</a>
         <a href="#section__a">Users</a>
     </nav>
@@ -122,5 +123,42 @@
         ?>
     </table>
     </section>
+
+    <section id="section__b">
+        <h3><b>Contacts</b></h3>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Gender</th>
+            <th>Message</th>
+        </tr>
+  
+        <?php 
+        include_once 'userRepository.php';
+
+        $userRepository = new UserRepository();
+
+        $contacts = $userRepository->getAllContacts();
+
+        foreach($contacts as $contact){
+            echo 
+            "
+            <tr>
+                <td>$contact[id]</td>
+                <td>$contact[name]</td>
+                <td>$contact[email] </td>
+                <td>$contact[phone] </td>
+                <td>$contact[gender] </td>
+                <td>$contact[message] </td>
+            </tr>
+            ";
+        }
+        ?>
+    </table>
+    </section>
 </body>
 </html>
+

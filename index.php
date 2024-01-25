@@ -172,32 +172,22 @@
     <section id="div_contact">
         <div class="container">
             <h2>Contact Us</h2>
-            <form method="POST" name="contact_form" class="contact_form" id="form"  autocomplete="off">
+            <form  action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" name="contact_form" class="contact_form" id="form" >
               <div class="form_group">
                 <div class="form_control">
-                  <input type="text" id="name" placeholder="Name"/>
+                  <input type="text" id="name" name='name' placeholder="Name"/>
                   <span class="error" id="nameError"></span>
                 </div>
                 <div class="form_control">
-                  <input type="text" id="email" placeholder="Email"/>
+                  <input type="text" id="email" name='email' placeholder="Email"/>
                   <span class="error" id="emailError"></span>
                 </div>
                
             </div>
-              <div class="form_group">
-                <div class="form_control">
-                  <input type="password" id="password" placeholder="Password" />
-                  <span class="error" id="passwordError"></span>
-                </div>
-               
-                <div class="form_control">
-                    <input type="password" id="repeatPw" placeholder="Confirm Password" />
-                    <span class="error" id="repeatPwError"></span>
-                </div>
-              </div>
+
 
               <div class="form_control">
-                <input type="tel" name="phone" id="phone" placeholder="Phone Number" />
+                <input type="tel" name="phone" id="phone" name='phone' placeholder="Phone Number" />
                 <span class="error" id="phoneError"></span>
               </div>
 
@@ -215,7 +205,7 @@
                 <textarea name="message" id="message" cols="30" rows="10" placeholder="Message..."></textarea>
               </div>
 
-              <input type="submit" name="submit" id="submit" value="SEND" />
+              <input type="submit" name="contactBtn" id="submit" value="SEND" />
 
               <div class="success_message" id="success_msg">
               </div>
@@ -266,30 +256,25 @@
 
 
 <script>
-    document.getElementById('form').addEventListener('submit', function(event) {
+    document.getElementById('form').addEventListener('contactBtn', function(event) {
       event.preventDefault();
 
       let nameInput = document.getElementById('name');
       let emailInput = document.getElementById('email');
-      let passwordInput = document.getElementById('password');
-      let repeatPwInput = document.getElementById('repeatPw');
       let phoneInput = document.getElementById('phone');
 
       let nameError = document.getElementById('nameError');
       let emailError = document.getElementById('emailError');
-      let passwordError = document.getElementById('passwordError');
       let phoneError = document.getElementById('phoneError');
-      let repeatPwError = document.getElementById('repeatPwError');
+  
 
       nameError.innerText = '';
       emailError.innerText = '';
-      passwordError.innerText = '';
       phoneError.innerText = '';
       repeatPwError.innerText = '';
 
       let nameRegex=/^[A-Z][a-z]{2,20}/;
       let emailRegex =/[a-z0-9.-_]+@+[\sa-z]+\.+[\sa-z]{2,4}$/;
-      let passwordRegex = /^[A-Z]+[a-z.-_]+[0-9]{3}$/;
       let phoneRegex = /^\+[0-9]{12}$/;
 
 
@@ -300,17 +285,9 @@
       if (!emailRegex.test(emailInput.value)) {
         emailError.innerText = 'Invalid email input.';
       }
-
-      if (!passwordRegex.test(passwordInput.value)) {
-        passwordError.innerText = 'Invalid input.';
-      }
       
       if (!phoneRegex.test(phoneInput.value)) {
         phoneError.innerText = 'Invalid input.';
-      }
-      if ((password.value)!==(repeatPw.value) ) {
-        repeatPwError.innerText = 'Incorrect password.';
-        return;
       }
       
     });
@@ -319,4 +296,29 @@
 </html>
 <?php
   }
+  include_once 'userRepository.php';
+  include_once 'contact.php';
+  
+  if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['contactBtn'])) {
+      $name = $_POST['name'];
+      $email = $_POST['email'];
+      $phone = $_POST['phone'];
+      $gender = $_POST['gender'];
+      $message = $_POST['message'];
+  
+      if (empty($name) || empty($email) || empty($phone) || empty($gender) || empty($message)) {
+          echo "Invalid data. Please check your input.";
+      } else {
+              $userRepository = new UserRepository();
+
+              $contact = new Contact(null, $name, $email, $phone, $gender, $message);
+
+              $userRepository->insertContact($contact);
+  
+              echo "Contact information has been inserted successfully!";
+      }
+  }
+  ?>
+  
 ?>
+

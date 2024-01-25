@@ -19,7 +19,7 @@ class UserRepository{
         $password = $user->getPassword();
         $role = $user->getRole();
 
-        $username = $user->getUsername();
+       
         $role = ($username === 'admin') ? 'admin' : 'user';
 
         $sql = "INSERT INTO user (id,name,username,email,password,role) VALUES (?,?,?,?,?,?)";
@@ -30,6 +30,23 @@ class UserRepository{
 
         echo "<script> alert('User has been inserted successfuly!'); </script>";
     }
+    function insertContact($contact) {
+        $conn = $this->connection;
+
+        $id = $contact->getId();
+        $name = $contact->getName();
+        $email = $contact->getEmail();
+        $phone = $contact->getPhone();
+        $gender = $contact->getGender();
+        $message = $contact->getMessage();
+    
+        $sql = "INSERT INTO contact (id,name, email, phone, gender, message) VALUES (?,?, ?, ?, ?, ?)";
+        $statement = $conn->prepare($sql);
+        $statement->execute([$id,$name, $email, $phone, $gender, $message]);
+    
+        echo "<script> alert('Contact information has been inserted successfully!'); </script>";
+    }
+    
 
     function getAllUsers(){
         $conn = $this->connection;
@@ -40,6 +57,17 @@ class UserRepository{
         $users = $statement->fetchAll();
 
         return $users;
+    }
+
+    function getAllContacts(){
+        $conn = $this->connection;
+
+        $sql = "SELECT * FROM contact";
+
+        $statement = $conn->query($sql);
+        $contacts = $statement->fetchAll();
+
+        return $contacts;
     }
 
     function getUserById($id){
@@ -87,6 +115,7 @@ class UserRepository{
 
         return ($user !== false);
     }
+    
 
     
 }

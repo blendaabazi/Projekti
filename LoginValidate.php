@@ -25,8 +25,15 @@
                }else{
                    $i++; 
                    if($i == sizeof($user)){
-                    echo "Incorrect Username or Password!";
-                    exit();
+                     if($username == $user['username'] && $password != $user['password']){
+                        echo 'Password incorrect!';
+                        exit();
+        
+                        }
+                       else if($username != $user['username']){
+                           echo 'Username does not exist!';
+                           exit();
+                       }
                    }
                    
                }

@@ -31,7 +31,7 @@
                     <label for="">Password</label>
                     <div class="error-message" id="passwordError"></div>
                 </div>
-                <!-- <input type="submit" name="loginBtn" value="Login"> -->
+                
                 <button id="btnlgn" name="loginBtn" onclick="func1()">Login</button>
                 <p>Don't have account?<a href="#" id="link_rg" >Register</a></p>
             </div>
