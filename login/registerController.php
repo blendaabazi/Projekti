@@ -6,6 +6,7 @@ function validateUserData($name, $username, $email, $password) {
     if (empty($name) || empty($username) || empty($email) || empty($password)) {
         return false;
     }
+    
 
     return true;
 }
