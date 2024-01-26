@@ -1,13 +1,11 @@
 
 <?php
+$productId = $_GET['id'];
+include_once '../products/productRepository.php';
 
-//edit users
-$userId = $_GET['id'];
-include_once '../user/userRepository.php';
+$productRepository = new ProductRepository();
 
-$userRepository = new UserRepository();
-
-$user  = $userRepository->getUserById($userId);
+$product  = $productRepository->getProductById($productId);
 
 ?>
 
@@ -41,6 +39,8 @@ $user  = $userRepository->getUserById($userId);
     color: white;
     margin-right: 10px;
     padding: 8px;
+    /* border: 1px solid white;
+    border-radius: 5px; */
     display: inline-block;
     transition: background-color 0.3s;
 }
@@ -100,29 +100,48 @@ input[type="submit"]:hover {
     </div>
 
     <form action="" method="post">
-        <input type="text" name="id"  value="<?=$user['id']?>" readonly> <br> <br>
-        <input type="text" name='name'  value="<?=$user['name']?>"> <br> <br>
-        <input type="text" name='username'  value="<?=$user['username']?>"> <br> <br>
-        <input type="text" name="email"  value="<?=$user['email']?>"> <br> <br>
-        <input type="text" name="password"  value="<?=$user['password']?>"> <br> <br>
-        <input type="text" name="role"  value="<?=$user['role']?>"> <br> <br>
-
+        <input type="text" name="id"  value="<?=$product['id']?>" readonly> <br> <br>
+        <input type="text" name='title'  value="<?=$product['title']?>"> <br> <br>
+        <input type="text" name='price'  value="<?=$product['price']?>"> <br> <br>
+        <input type="text" name="imagePath"  value="<?=$product['imagePath']?>"> <br> <br>
+    
         <input type="submit" name="editBtn" value="Save"> <br> <br>
     </form>
 </body>
 </html>
 
 <?php 
-if(isset($_POST['editBtn'])){
-    $id = $user['id'];
-    $name = $_POST['name'];
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $role = $_POST['role'];
 
-    $userRepository->updateUser($id,$name,$username,$email,$password,$role);
-    header("location:../admin/dashboard.php");
-    
+include_once '../products/productRepository.php';
+
+if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])) {
+    $id = $_GET['id'];
+
+    $productRepository = new ProductRepository();
+    $product = $productRepository->getProductById($id);
+
+    // Nese produkti nuk gjendet, mund te beni nje trajtim te tjeter si shfaqjen e nje mesazhi te gabimit.
+    if (!$product) {
+        echo "Produkti nuk u gjet!";
+        exit();
+    }
+} elseif ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Përpunoni të dhënat e POST-uar pasi të jenë paraqitur nga forma e editimit.
+    $id = $_POST['id'];
+    $title = $_POST['title'];
+    $price = $_POST['price'];
+    $imagePath = $_POST['imagePath'];
+
+    $productRepository = new ProductRepository();
+    $productRepository->updateProduct($id, $title, $price, $imagePath);
+
+    // Pasi të dhënat janë edituar, ridrejto në faqen kryesore ose ku deshironi.
+    header("Location: ../admin/dashboard.php");
+    exit();
+} else {
+    // Nëse nuk ka ndonjë parameter 'id' dhe nuk është bërë një POST request, kthehu në faqen kryesore ose ku deshironi.
+    header("Location: ../admin/dashboard.php");
+    exit();
 }
+
 ?>

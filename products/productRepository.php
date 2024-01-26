@@ -1,7 +1,15 @@
 <?php
+include_once '../bookstoreDB/databaseConnection.php';
 
 class ProductRepository
 {
+    private $connection;
+
+    function __construct(){
+        $conn = new DatabaseConnection;
+        $this->connection = $conn->startConnection();
+    }
+
     
     function getAllProducts(){
         $conn = $this->connection;
@@ -55,7 +63,18 @@ class ProductRepository
 
        echo "<script>alert('delete was successful'); </script>";
    }
+   function getProductById($id){
+    $conn = $this->connection;
+
+    $sql = "SELECT * FROM product WHERE id='$id'";
+
+    $statement = $conn->query($sql);
+    $product = $statement->fetch();
+
+    return $product;
+}
  
 }
+
 
 ?>

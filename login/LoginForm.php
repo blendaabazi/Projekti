@@ -17,6 +17,9 @@
 <body>
     <div class="container" style="background: url(../images/bgPhoto.png);background-position: center;background-repeat: no-repeat; background-size: cover;">
         <div class="box loginbox">
+
+
+        <!-- Login Form -->
             <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
             <!-- <form action="LoginForm.php" method="post"> -->
             <div class="detais dtsignin">
@@ -39,6 +42,9 @@
         
        
         <div class="singupbox" >
+
+
+        <!-- Register Form -->
          <form action="../login/LoginForm.php" method="post">
             <div class="detais dtsignup">
                 <h2>Register</h2>
@@ -83,7 +89,7 @@
 
     let linkrg = document.querySelector("#link_rg");
     let linklg = document.querySelector("#link_lg");
-
+    // Funksioni per zhvendosje
     function callsign(){
         detlg.classList.toggle("callreg");
         detrg.classList.toggle("setreg");
@@ -92,9 +98,14 @@
     linkrg.addEventListener("click",callsign);
     linklg.addEventListener("click",callsign);
 
-    let usernameRegex = /[A-Za-z0-9.-_]{8,15}$/;
-    let passwordRegex = /^[A-Z]+[a-z.-_]+[0-9]{3}$/;
-    let nameRegex=/^[A-Z][a-z]{2,20}/;
+
+
+
+
+    // Validimi i Login dhe Register
+    let usernameRegex = /[a-z0-9.-_]{5,15}$/;
+    let passwordRegex = /^[a-z.-_]+[0-9]{3}$/;
+    let nameRegex=/^[a-z]{2,20}/;
     let emailRegex =/[a-z0-9.-_]+@+[\sa-z]+\.+[\sa-z]{2,4}$/;
 
     function func1(){
@@ -108,11 +119,11 @@
         passwordError.innerText = '';
 
         if(usernameRegex.test(usernameInput.value) === false){
-        usernameError.innerText = 'Invalid input';
+        usernameError.innerText = 'Invalid input!';
         return;
        }
        if(passwordRegex.test(passwordInput.value) === false){
-        passwordError.innerText = 'Invalid input';
+        passwordError.innerText = 'Invalid input!';
         return;
        }
 
@@ -138,19 +149,19 @@
         passwordError.innerText = '';
 
         if(nameRegex.test(nameInput.value) === false){
-        nameError.innerText = 'Emri juaj duhet te filloj me shkronje te madhe!';
+        nameError.innerText = 'Invalid name!';
         return;
         }
         if(usernameRegex.test(usernameInput.value) === false){
-        usernameError.innerText = 'Username duhet te perfshije 8-15 karaktere!';
+        usernameError.innerText = 'Invalid username!';
         return;
         }
         if(emailRegex.test(emailInput.value) === false){
-        emailError.innerText = 'Invalid email input';
+        emailError.innerText = 'Invalid email!';
         return;
         }
         if(passwordRegex.test(passwordInput.value) === false){
-        passwordError.innerText = 'Password duhet te filloj me shkronje te madhe me 3 numra';
+        passwordError.innerText = 'Invalid password!';
         return;
         }
      alert('Success!');

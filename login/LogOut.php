@@ -1,4 +1,5 @@
 <?php
+//Per mbarimin e sesionit
   session_start();
 
   session_destroy();

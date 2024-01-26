@@ -80,6 +80,16 @@ class UserRepository{
 
         return $user;
     }
+    function getUserByUsername($username){
+        $conn = $this->connection;
+
+        $sql = "SELECT * FROM user WHERE username='$username'";
+
+        $statement = $conn->query($sql);
+        $user = $statement->fetch();
+
+        return $user;
+    }
     
     function updateUser($id,$name,$username,$email,$password,$role){
          $conn = $this->connection;

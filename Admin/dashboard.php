@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
        <style>
+
+        /* Pjesa  e css per dashboard */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -69,6 +71,44 @@
         a:hover {
             text-decoration: underline;
         }
+        #section__a{
+        margin: 100px auto;
+        }
+        #section__b{
+        margin: 100px auto;
+        }
+
+
+        /* product */
+        #section__c {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #section__c label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #section__c input {
+             width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        #section__c input[type="submit"]:hover {
+             background-color: #0056b3;
+        }
+        #section__c input[type="submit"] {
+            background-color: #333;
+            color:white;
+        }
+
     </style>
 
 </head>
@@ -80,10 +120,12 @@
     <nav>
         <a href="../pages/index.php">Home</a>
         <a href="#section__b">Contacts</a>
-        <a href="#">Products</a>
+        <a href="#section__d">Products</a>
         <a href="#section__a">Users</a>
     </nav>
-   
+
+
+   <!-- Userat -->
     <section id="section__a">
         <h3><b>Users</b></h3>
     <table border="1">
@@ -124,6 +166,9 @@
     </table>
     </section>
 
+
+
+    <!-- Contacts from Users -->
     <section id="section__b">
         <h3><b>Contacts</b></h3>
     <table border="1">
@@ -159,6 +204,72 @@
         ?>
     </table>
     </section>
+    <?php
+        include_once '../products/productRepository.php';
+
+        $productRepository = new ProductRepository();
+        $products = $productRepository->getAllProducts();
+
+
+    ?>
+
+    
+
+    <!-- Products List -->
+    <section id="section__d">
+    <h3><b>Products List</b></h3>
+     <a href="#section__c" style="color:black;">Add a book</a>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Image Path</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <?php foreach ($products as $product) : ?>
+                <tr>
+                    <td><?php echo $product['id']; ?></td>
+                    <td><?php echo $product['title']; ?></td>
+                    <td><?php echo $product['price']; ?></td>
+                    <td><?php echo $product['imagePath']; ?></td>
+                    <td><a href="../products/edit.php?id=<?php echo $product['id']; ?>">Edit</a></td>
+                    <td><a href="../products/delete.php?id=<?php echo $product['id']; ?>">Delete</a></td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+        </section>
+
+
+
+
+
+        <!-- Shto Produkte -->
+        <section id="section__c">
+        <h3><b>Products</b></h3>
+
+         <form action="../pages/index.php" method="POST">
+            <label for="title">Id:</label>
+            <input type="text" name="id" required><br> 
+
+            <label for="title">Title:</label>
+            <input type="text" name="title" required><br>
+
+            <label for="price">Price:</label>
+            <input type="text" name="price" required><br>
+
+            <label for="imagePath">Image Path:</label>
+            <input type="text" name="imagePath" required><br>
+
+            <input type="submit" name="addBookBtn" value="Add Book">
+        </form>
+        </section>
+
+
+
+
+
 </body>
 </html>
 

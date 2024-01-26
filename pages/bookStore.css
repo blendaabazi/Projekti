@@ -3,6 +3,11 @@
     padding: 0%;
     box-sizing: border-box;
 }
+
+
+
+
+/* Pjesa e Header */
 .headerConatiner{
     display: flex;
     justify-content: space-between;
@@ -20,108 +25,13 @@
     font-size: 26px;
     color: black;
 }
-@media screen and (max-width:780px){
-    body{
-        margin: 0;
-        padding: 0;
-    }
-    .div-links a{
-        justify-content: end;
-        font-weight: bold;
-        margin-right: 1px;
-        display: block;
-        width: 100px;
-        text-align: center;
-    }
-    .slogan h2{
-        text-align: left;
-        padding-right: 180px;
-        font-size: 50px;
-    }
-.headerConatiner{
-    display: flex;
-    justify-content: space-between;
-}
-.div-links{
-    padding-top: 15px;
-    position: absolute;
-    height: 300px;
-    width: 150px;
-    backdrop-filter: blur(15px);
-    top: 0;
-    right: 0;
-    text-align: left;
-    z-index: 2;
-}
-}
-    @media screen and (max-width: 700px) {
-        .footerContent {
-          /* Stili për footer-in për madhësi të vogla ekrani */
-          padding: 70px;
-        }
-        .footerStart{
-          /* Stili për përmbajtjen në footer për madhësi të vogla ekrani */
-            margin-left: -20px;
-        }
-        
-        .footerRight {
-            justify-content: center; 
-            margin-top: 10px;
-            margin-left: -100px;
-          }
-          
-          .links {
-            width: auto;
-            flex-wrap: wrap; 
-            margin: 5px; 
-          }
-        .footerCenter {
-            margin-left: -40px;
-        }
-          
-        .footerLeft {
-           margin-left: 70px;
-           
-          }
-          .hide{
-            display:none; 
-           }
-        }
-    @media screen and (max-width:547px){
-      
-        .hide{
-            display:none; 
-           }
-    .footerStart{
-        display: flex;
-        justify-content: space-around;
-        padding-top: 10px;
-        font-size: 12px;
-        
-    }
-    .slogan h2{
-        text-align: left;
-        padding-right: 180px;
-        font-size: 40px;
-    }
-    .logo{
-        font-size: 22px;
-    }
-    .headerConatiner{
-        padding: 20px;
-    }
-    .headerConatiner li a{
-        padding: 5px 6px;
-    }
-    
-}
+/* Pjesa e header dhe main */
 .b{
     background-image: url(../images/bgPhoto.png);
     background-position: center;
     background-size: cover;
     height: 600px;
     background-repeat:no-repeat;
-    /* background-color: #21437a; */
     justify-content: center;
     align-items: center;
 }
@@ -131,13 +41,6 @@
     margin-left: 20px;
     box-shadow: 0px 0px 10px;
 }
-#slider,button{
-    padding: 15px;
-    text-align: center;
-    background-color: transparent;
-    font-weight: bold;
-}
-
 .headerConatiner li{
     display: inline;
     /* justify-content: space-evenly; */
@@ -184,6 +87,7 @@ ul li a:hover{
     justify-content: center;
 
 }
+/* Butoni Shop Now */
 button a{
     text-decoration: none;
     font-weight: bold;
@@ -194,26 +98,24 @@ button:hover{
     border: 2px solid black;
     box-shadow: 0px 0px 8px;
 }
-.footerStart{
-    display: flex;
-    justify-content: space-around;
-    padding-top: 40px;
-    
+
+
+
+
+
+
+
+/* Butoni i slider */
+#slider,button{
+    padding: 15px;
+    text-align: center;
+    background-color: transparent;
+    font-weight: bold;
 }
-.footerContent{
-    background-color:#d1d9e3 ;
-    /* background-color: #808082; */
-    padding: 0px 25px ;
-    box-shadow: 0px 0px 10px;
-}
-.links{
-    display: flex;
-    width: 40px;
-    padding-top:15px ;
-}
-.links a{
-    padding-left: 10px;
-}
+
+
+
+/* Container i fotove */
 .photos{
     box-shadow: 0px 0x 10px;
     display: flex;
@@ -232,6 +134,7 @@ button:hover{
     margin-right: 40px;
     box-shadow: 0 0 8px;
 }
+/* Rubrika e librave */
 .rubrika{
     background-color: white;
     margin: 15px 10px;
@@ -260,11 +163,11 @@ button:hover{
     color: white;
 }
 
-#div_contact{
-    min-height: 500px;
-    background-color: var(--quinaryColor);
-    margin-top: 50px;
-  }
+
+
+
+
+/* Pjesa e Contact Us */
 .container{
     width: 100%;
     padding: 80px 0;
@@ -303,16 +206,27 @@ button:hover{
     justify-content: space-between;
     padding: 20px 0;
 }
-.select_box{
-    width: 100%;
-    background-color: transparent;
-    border: 1px solid #000;
-    color: #000;
-    padding: 10px;
-}
 #submit:hover{
     background-color: #19283f;
     color: #fff;
+}
+
+
+
+
+
+
+/* Pjesa e footer */
+.footerContent{
+    background-color:#d1d9e3 ;
+    padding: 0px 25px ;
+    box-shadow: 0px 0px 10px;
+}
+.footerStart{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 40px;
+    
 }
 .footerMain{
     display: flex;
@@ -331,9 +245,17 @@ button:hover{
     width:170px;
 }
 .footerRight{
-    /* padding-right: 200px; */
     margin-right: 150px;
     width: 100px;
+}
+/* Foto linkat ne footer */
+.links{
+    display: flex;
+    width: 40px;
+    padding-top:15px ;
+}
+.links a{
+    padding-left: 10px;
 }
 .footerEnd{
     display: flex;
@@ -342,8 +264,137 @@ button:hover{
 
 }
 
-/* Dashboard-Admin */
-/* .hide{
-    display:none;
-} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
+@media screen and (max-width:780px){
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    /* Header */
+    .headerConatiner{
+        display: flex;
+        justify-content: space-between;
+    }
+    .slogan h2{
+        text-align: left;
+        padding-right: 180px;
+        font-size: 50px;
+    }
+
+    /* Pjesa e Footer */
+    .div-links a{
+        justify-content: end;
+        font-weight: bold;
+        margin-right: 1px;
+        display: block;
+        width: 100px;
+        text-align: center;
+    }
+    
+
+.div-links{
+    padding-top: 15px;
+    position: absolute;
+    height: 300px;
+    width: 150px;
+    backdrop-filter: blur(15px);
+    top: 0;
+    right: 0;
+    text-align: left;
+    z-index: 2;
+}
+}
+
+
+    @media screen and (max-width: 700px) {
+        /* Pjesa e footer */
+        .footerContent {
+          padding: 70px;
+        }
+        .footerStart{
+            margin-left: -20px;
+        }
+        
+        .footerRight {
+            justify-content: center; 
+            margin-top: 10px;
+            margin-left: -100px;
+          }
+          
+          .links {
+            width: auto;
+            flex-wrap: wrap; 
+            margin: 5px; 
+          }
+        .footerCenter {
+            margin-left: -40px;
+        }
+          
+        .footerLeft {
+           margin-left: 70px;
+           
+          }
+          /* Pjesa e butonit dashboard  */
+          .hide{
+            display:none; 
+           }
+        }
+
+
+    @media screen and (max-width:547px){
+
+        /* Header */
+        .headerConatiner{
+            padding: 20px;
+        }
+
+        .headerConatiner li a{
+            padding: 5px 6px;
+        }
+        .slogan h2{
+            text-align: left;
+            padding-right: 180px;
+            font-size: 40px;
+        }
+        .logo{
+            font-size: 22px;
+        }
+        
+
+       /* Pjesa e butonit dashboard  */
+        .hide{
+            display:none; 
+           }
+
+
+
+
+
+
+        /* Pjesa e footer */
+    .footerStart{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 10px;
+        font-size: 12px;
+        
+    }
+    
+   
+    
+    
+}
 

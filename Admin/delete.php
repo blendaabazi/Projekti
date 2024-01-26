@@ -1,4 +1,5 @@
 <?php
+//Delete Users
 $userId = $_GET['id'];
 include_once '../user/userRepository.php';
 

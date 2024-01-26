@@ -7,7 +7,27 @@
     <link rel="stylesheet" href="../pages/bookStore.css">
 </head>
 <style>
-    .b{
+      .slogan p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+    
+    
+}
+@media screen and (max-width:780px){
+   
+    .slogan p{
+        text-align: left;
+        padding-left: -80px;
+        font-size: 10px;
+        width:170px;
+    }
+    .slogan {
+        margin-top:30px;
+        padding:10px 0 10px 10px;
+    }
+   
+}
+.b{
     background-image: url(../images/bgPhoto.png);
     background-position: center;
     background-size: cover;
@@ -44,7 +64,7 @@
     <hr style="color: white;">
     <main class="slogan">
         <h2>Libra Shkencor</h2>
-        <p>Ketu mund te gjeni ...</p>
+        <p>Zhvillo njohuritë tua shkencore dhe eksploro misteret e një bote të panjohur.</p>
     </main> 
     </div>
     <div class="photos">

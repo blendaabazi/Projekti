@@ -1,4 +1,4 @@
-<?php
+    <?php
 session_start();
 include_once '../user/userRepository.php';
 
@@ -160,9 +160,7 @@ body {
         </main>
     </div>
 
-    <footer class="footerContent">
-        <!-- Footeri i faqes -->
-    </footer>
+   
 
 </body>
 
