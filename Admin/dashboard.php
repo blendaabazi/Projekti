@@ -80,7 +80,7 @@
 
 
         /* product */
-        #section__c {
+        #section__c,#section__e {
             max-width: 600px;
             margin: 100px auto;
             padding: 20px;
@@ -90,21 +90,21 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        #section__c label {
+        #section__c label ,#section__e  label {
             display: block;
             margin-bottom: 10px;
         }
 
-        #section__c input {
+        #section__c input , #section__e input {
              width: 100%;
             padding: 10px;
             margin-bottom: 15px;
             box-sizing: border-box;
         }
-        #section__c input[type="submit"]:hover {
+        #section__c  input[type="submit"]:hover ,#section__e input[type="submit"]:hover {
              background-color: #0056b3;
         }
-        #section__c input[type="submit"] {
+        #section__c  input[type="submit"] ,#section__e input[type="submit"] {
             background-color: #333;
             color:white;
         }
@@ -128,6 +128,7 @@
    <!-- Userat -->
     <section id="section__a">
         <h3><b>Users</b></h3>
+        <a href="#section__e" style="color:black;">Add a User</a>
     <table border="1">
         <tr>
             <th>ID</th>
@@ -139,7 +140,7 @@
             <th>Edit</th>
             <th>Delete</th>
         </tr>
-  
+
         <?php 
         include_once '../user/userRepository.php';
 
@@ -162,9 +163,53 @@
             </tr>
             ";
         }
+    
+
+        
+        include_once '../user/User.php';
+
+        if (isset($_POST['addUserBtn'])) {
+   
+        $name = $_POST['name'];
+        $username =$_POST['username'];
+        $email = $_POST['email'];
+        $password = $_POST['password']; 
+        $role = $_POST['role'];
+
+    
+        $user = new User(null, $name, $username, $email, $password, $role);
+        $userRepository->insertUser($user);
+        
+}
+
+
         ?>
     </table>
     </section>
+    <section id="section__e">
+    
+        <!-- Add User Form -->
+        <h3>Add New User</h3>
+        <form action="../admin/dashboard.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" name="name" required>
+    
+            <label for="username">Username:</label>
+            <input type="text" name="username" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" name="email" required>
+    
+            <label for="password">Password:</label>
+            <input type="password" name="password" required>
+    
+            <label for="role">Role:</label>
+            <input type="text" name="role" required>
+    
+            <input type="submit" name="addUserBtn" value="Add User">
+        </form>
+    </section>
+
 
 
 
