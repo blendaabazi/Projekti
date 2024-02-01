@@ -1,4 +1,5 @@
 <?php
+//Fillimi i sessionit per user/admin
   session_start();
   include_once '../user/userRepository.php';
   $hide="";

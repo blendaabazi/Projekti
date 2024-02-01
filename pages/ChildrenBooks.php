@@ -33,7 +33,6 @@
     background-size: cover;
     height: 600px;
     background-repeat:no-repeat;
-    /* background-color: #21437a; */
     justify-content: center;
     align-items: center;
 }

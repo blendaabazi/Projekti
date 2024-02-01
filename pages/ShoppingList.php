@@ -130,9 +130,9 @@ body {
             <div class="div-links">
                 <ul>
                     <li><a href="../pages/index.php">Home</a></li>
-                    <li><a href="../pages/dashboard.php" class="<?php echo $hide ?>">Dashboard</a></li>
+                    <li><a href="../admin/dashboard.php" class="<?php echo $hide ?>">Dashboard</a></li>
                    
-                    <li><a href="../pages/LogOut.php" style="background-color: rgb(0, 0, 0); color: white;">LogOut</a></li>
+                    <li><a href="../login/LogOut.php" style="background-color: rgb(0, 0, 0); color: white;">LogOut</a></li>
                 </ul>
             </div>
         </header>
@@ -140,22 +140,10 @@ body {
 
 
 
-
-        <!-- Shfaqja e listes se librave ne shporte -->
         <main class="slogan">
             <h3>Your Shopping List</h3>
             <div id="shoppingListContainer">
-                <?php
-                if (empty($shoppingList)) {
-                    echo "<p>Your shopping list is empty.</p>";
-                } else {
-                    echo "<ul>";
-                    foreach ($shoppingList as $item) {
-                        echo "<li>{$item['title']} - $ {$item['price']}</li>";
-                    }
-                    echo "</ul>";
-                }
-                ?>
+               
             </div>
         </main>
     </div>

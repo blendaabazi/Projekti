@@ -92,7 +92,7 @@ input[type="submit"]:hover {
     margin-right: 8px;
     font-size: 16px;
 }
-    </style>
+</style>
 <body>
 <div class="btn-container">
         <a href="../pages/index.php" class="icon">Home</a>
